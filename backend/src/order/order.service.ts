@@ -1,4 +1,4 @@
-import { HttpException, Injectable } from '@nestjs/common';
+import { HttpCode, HttpException, Injectable } from '@nestjs/common';
 import { FilmsRepository } from 'src/repository/repository';
 import { MakeOrderDTO, ticketsData } from './dto/order.dto';
 import { faker } from '@faker-js/faker';
@@ -38,7 +38,7 @@ export class OrderService {
       }
 
       if (!booking) {
-        return new HttpException({ error: 'Не удалось оформить заказ' }, 409);
+        return { error: 'Не удалось оформить заказ' };
       }
     }
 
