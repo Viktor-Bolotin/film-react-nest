@@ -1,11 +1,8 @@
-import { IsNumber } from 'class-validator';
-
 //TODO реализовать DTO для /orders
 export class ticketsData {
   film: string;
   session: string;
   daytime: string;
-  @IsNumber()
   row: string;
   seat: string;
   price: number;
