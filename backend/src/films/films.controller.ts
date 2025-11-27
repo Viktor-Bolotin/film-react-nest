@@ -6,7 +6,6 @@ import { GetFilmsDTO, GetSessionsDTO } from './dto/films.dto';
 export class FilmsController {
   constructor(private readonly filmsService: FilmsService) {}
 
-  @HttpCode(200)
   @Get()
   async getAllFilms(): Promise<GetFilmsDTO> {
     return this.filmsService.findAll();

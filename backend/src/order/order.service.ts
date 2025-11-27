@@ -1,4 +1,4 @@
-import { HttpCode, HttpException, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { FilmsRepository } from 'src/repository/repository';
 import { MakeOrderDTO, ticketsData } from './dto/order.dto';
 import { faker } from '@faker-js/faker';
