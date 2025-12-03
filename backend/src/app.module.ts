@@ -27,7 +27,7 @@ import { OrderService } from './order/order.service';
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        host: 'localhost',
+        host: configService.get('DATABASE_DRIVER'),
         port: 5432,
         username: configService.get('DATABASE_USERNAME'),
         password: configService.get('DATABASE_PASSWORD'),
